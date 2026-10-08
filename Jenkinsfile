@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    environment {
+        PATH = "C:\\Windows\\System32;C:\\Windows;${env.PATH}"
+    }
+
     tools {
         maven 'Maven3'
     }
@@ -26,3 +30,4 @@ pipeline {
             }
         }
     }
+}
